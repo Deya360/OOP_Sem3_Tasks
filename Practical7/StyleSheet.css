@@ -1,0 +1,45 @@
+#cntrlP {
+    -fx-background-color: null;
+    -fx-padding: 15;
+    -fx-border-style: solid outside;
+    -fx-border-width: 5;
+    -fx-border-insets: 10;
+    -fx-border-radius: 30;
+    -fx-border-color: black;
+}
+
+#btn {
+    -fx-background-color:
+     #c3c4c4,
+     linear-gradient(#d6d6d6 50%, white 100%),
+     radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+    -fx-font-size: 20;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+}
+
+#slider .axis-tick-mark {
+    -fx-stroke: black;
+    -fx-stroke-width: 1.5;
+}
+
+#slider .axis {
+    -fx-tick-label-fill: black;
+    -fx-tick-label-font-family: Consolas;
+    -fx-tick-label-font-size: 17;
+    -fx-tick-label-font-style: normal;
+    -fx-tick-label-font-weight: bold;
+}
+
+#slider .track {
+    -fx-background-color: linear-gradient(to right, derive(green, -25%), orange);
+}
+
+#resLbl {
+    letter-spacing: 1.6px;
+    -fx-border-color: black, transparent, black;
+    -fx-border-width: 0 0 1 0, 0 0 1 0, 0 0 1 0;
+    -fx-border-insets: 0 0 1 0, 0 0 2 0, 0 0 3 0;
+}
