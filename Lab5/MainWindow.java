@@ -4,8 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
 public class MainWindow extends JFrame {
     private static String imagePath;
@@ -37,8 +35,6 @@ public class MainWindow extends JFrame {
         contentPnl.add(pathLbl,BorderLayout.NORTH);
         contentPnl.add(imgLbl, BorderLayout.CENTER);
 
-        pathLbl.addMouseListener(new CustomMouseListener());
-
         mainFrm.getContentPane().add(contentPnl);
         mainFrm.pack();
         mainFrm.setVisible(true);
@@ -51,37 +47,4 @@ public class MainWindow extends JFrame {
             }
         });
     }
-}
-
-class CustomMouseListener implements MouseListener
-{
-    @Override public void mouseClicked(MouseEvent e){}
-
-    @Override
-    public void mouseEntered(MouseEvent e)
-    {
-        //Mouse is over component
-        Object source = e.getSource();
-        if (source instanceof JLabel) {
-            JLabel lbl = (JLabel)source;
-            System.out.println(lbl);
-        }
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e)
-    {
-        //Mouse is over component
-        Object source = e.getSource();
-        if (source instanceof JLabel) {
-            JLabel lbl = (JLabel)source;
-            lbl.setText("OUT");
-        }
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e){}
-
-    @Override
-    public void mouseReleased(MouseEvent e){}
 }
